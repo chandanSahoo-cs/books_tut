@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-border {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    color: black;
+  }
+  
+  .text-border::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    color: red;  /* Border color */
+    background: white;  /* Background color for border contrast */
+    padding: 2px 4px;  /* Border thickness */
+    border-radius: 4px;  /* Optional: rounded corners */
+  }
+  
